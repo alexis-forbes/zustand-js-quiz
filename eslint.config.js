@@ -7,9 +7,9 @@ import { defineConfig, globalIgnores } from 'eslint/config'
  
 
 export default defineConfig([
-  globalIgnores(['dist']),
+  globalIgnores(['dist', 'vite.config.ts']),
   {
-    files: ['**/*.{ts,tsx}'],
+    files: ['src/**/*.{ts,tsx}'],
     extends: [
       js.configs.recommended,
       tseslint.configs.recommended,
@@ -24,7 +24,7 @@ export default defineConfig([
       },
     },
     rules: {
-      '@typescript-eslint/semi': ['error', 'never'],
+      'semi': ['error', 'never'],
       'no-extra-semi': 'error'
     },
   },
